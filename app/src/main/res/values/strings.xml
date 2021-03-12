@@ -11,4 +11,5 @@
       -->
     <string name="app_name">AndroidDevChallenge</string>
     <string name="list_title">リスト</string>
+    <string name="detail_title">詳細</string>
 </resources>

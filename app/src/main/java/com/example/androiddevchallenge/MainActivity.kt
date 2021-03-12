@@ -28,6 +28,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
+import com.example.androiddevchallenge.ui.detail.DetailScreen
 import com.example.androiddevchallenge.ui.list.ListScreen
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
@@ -51,8 +52,9 @@ fun MyApp() {
             ListScreen(navController = navController)
         }
         composable(
-            "detail/?dog={dog}",
+            "detail",
         ) {
+            DetailScreen(navController = navController)
         }
     }
 }

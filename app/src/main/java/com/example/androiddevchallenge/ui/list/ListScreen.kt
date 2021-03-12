@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
+import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.ui.theme.MyTheme
@@ -26,7 +27,9 @@ fun ListScreen(navController: NavController) {
         content = {
             LazyColumn {
                 items(dogs) {
-                    ListItem(dog = it, onItemClick = { /*TODO*/ })
+                    ListItem(dog = it, onItemClick = {
+                        navController.navigate("detail")
+                    })
                 }
             }
         },
